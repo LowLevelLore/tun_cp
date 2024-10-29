@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=2000px height=400px src="./readme_images/tcp.jpg" style="object-fit: none; /* Do not scale the image */
+ <img width=2000px height=400px src="./readme_images/tcp.png" style="object-fit: none; /* Do not scale the image */
   object-position: center; " alt="Project logo"></a>
 </p>
 
@@ -9,8 +9,6 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)]()
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
