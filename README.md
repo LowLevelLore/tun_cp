@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=2000px height=400px src="./tcp.jpg" style="object-fit: none; /* Do not scale the image */
+ <img width=2000px height=400px src="./readme_images/tcp.jpg" style="object-fit: none; /* Do not scale the image */
   object-position: center; " alt="Project logo"></a>
 </p>
 
@@ -68,25 +68,25 @@ To run this program make sure to execute the following command in the <b> tun_cp
 ```
 sudo bash run.sh
 ```
-![alt text](image.png)
+![alt text](./readme_images/image.png)
 
 To capture the communication between two programs the following command is needed
 ```
 sudo tshark -i tun0
 ```
-![alt text](image-1.png)
+![alt text](./readme_images/image-1.png)
 
 To send TCP packets to this newly created NIC we need to run te following command
 ```
 echo -n '<message>' | nc 192.168.0.2 8000
 ```
-![alt text](image-2.png)
+![alt text](./readme_images/image-2.png)
 
 Actual packets send during the communication:
 tshark:
-![alt text](image-4.png)
+![alt text](./readme_images/image-4.png)
 tun_cp:
-![alt text](image-3.png)
+![alt text](./readme_images/image-3.png)
 
 
 ## ⛏️ Built Using <a name = "built_using"></a>
