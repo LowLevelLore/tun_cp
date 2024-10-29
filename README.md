@@ -1,6 +1,7 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=2000px height=400px src="./tcp.jpg" style="object-fit: none; /* Do not scale the image */
+  object-position: center; " alt="Project logo"></a>
 </p>
 
 <h3 align="center">TUN-CP - A TCP stack using tun/tap on linux</h3>
@@ -26,15 +27,24 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+<b>NOTE:</b> <p>This is a dry run dont do this everytime..</p>
+
 Adding a tuntap interface on any linux system (this will act as our NIC).
 ```
-sudo ip tuntap add mode tap tap0
+sudo ip tuntap add mode tap tun0
 ```
 
 Enabling the tap0 interface.
 ```
-sudo ifconfig tap0 up
+sudo ifconfig tun0 up
 ```
+
+Assign an IP to tap0 interface.
+```
+sudo ip addr add 192.168.0.1/24 dev tun0
+```
+
+<!-- sudo ip link set up dev tap0 -->
 
 ### Installing
 
@@ -56,8 +66,27 @@ cd tun_cp
 To run this program make sure to execute the following command in the <b> tun_cp
 </b> folder
 ```
-./run.sh
+sudo bash run.sh
 ```
+![alt text](image.png)
+
+To capture the communication between two programs the following command is needed
+```
+sudo tshark -i tun0
+```
+![alt text](image-1.png)
+
+To send TCP packets to this newly created NIC we need to run te following command
+```
+echo -n '<message>' | nc 192.168.0.2 8000
+```
+![alt text](image-2.png)
+
+Actual packets send during the communication:
+tshark:
+![alt text](image-4.png)
+tun_cp:
+![alt text](image-3.png)
 
 
 ## ⛏️ Built Using <a name = "built_using"></a>

@@ -1,0 +1,2 @@
+86DD - IPv6 packet
+0800 - IPv4 packet (ping)
